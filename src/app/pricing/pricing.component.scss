@@ -43,10 +43,9 @@
         padding-top: $padding-standard-item;
         button {
             @extend %button-standard;
-            // -webkit-border-image: -webkit-linear-gradient( rgb(79, 70, 206), rgb(83, 176, 219));
-            border-color: $border-color-secondary; //linear-gradient(to right, rgb(79, 70, 206), rgb(83, 176, 219)); //$bg-color-primary;
-            // -webkit-border-image: -webkit-linear-gradient(right, black, rgba(0, 0, 0, 0)) 1 100%;
-            color: $border-color-secondary; //$bg-color-primary;
+            box-shadow: none;
+            border-color: $border-color-secondary;
+            color: $border-color-secondary;
             &:hover {
                 background: $bg-color-primary;
                 color: $font-color-primary;
