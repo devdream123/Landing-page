@@ -1,7 +1,4 @@
-@import '../../common/scss/layouts.scss';
-@import '../../common/scss/colors.scss';
-@import '../../common/scss/variables.scss';
-@import '../../common/scss/fonts.scss';
+@import '../../common/scss/base.scss';
 $padding-standard-hero: 180px;
 .container-fluid {
     padding-top: $padding-standard-hero;

@@ -1,7 +1,4 @@
-@import '../../common/scss/fonts.scss';
-@import '../../common/scss/colors.scss';
-@import '../../common/scss/layouts.scss';
-@import '../../common/scss/variables.scss';
+@import '../../common/scss/base.scss';
 $textbox-size-large: 200px;
 .container-fluid {
     @extend %container-layout;
@@ -21,8 +18,12 @@ $textbox-size-large: 200px;
 .form-row {
     margin-bottom: $margin-standard-item/2;
     .form-control {
-        border: 1px solid $bg-color-primary;
         height: 50px;
+        border-radius: 0;
+        &:focus {
+            border: 1px solid $border-color-secondary;
+            box-shadow: none;
+        }
     }
     .message {
         textarea {
