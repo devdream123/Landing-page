@@ -6,6 +6,8 @@ This project was generated with [Angular CLI] (https://github.com/angular/angula
 `git clone https://github.com/devdream123/Landing-page.git`
 
 ## Install the dependencies
+Go to the cloned folder,
+
 `npm install`
 
 This will install the dependencies in package.json
