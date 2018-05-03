@@ -1,0 +1,60 @@
+@import '../../common/scss/fonts.scss';
+@import '../../common/scss/colors.scss';
+@import '../../common/scss/layouts.scss';
+@import '../../common/scss/variables.scss';
+$icon-font-standard: 24px;
+$font-size-with-icon-standard: 16px;
+.container-fluid {
+    @extend %container-layout;
+    background: $bg-color-primary;
+    color: $font-color-primary;
+}
+
+.title {
+    @extend %title-section;
+    color: $font-header-color-primary;
+}
+
+.subtitle {
+    @extend %subtitle-section;
+}
+
+.button-group {
+    div {
+        margin: 0 auto;
+        text-align: center;
+    }
+    button {
+        @extend %button-standard;
+        color: $font-color-primary;
+        border-color: $border-color-primary;
+        font-size: $font-size-with-icon-standard;
+        &:hover {
+            background: $bg-color-secondary;
+            color: $button-font-color-hover;
+            cursor: pointer;
+        }
+        .icon {
+            i {
+                font-size: $icon-font-standard;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container-fluid {
+        padding-left: $padding-standard-item;
+        padding-right: $padding-standard-item;
+        padding-bottom: $padding-standard-item;
+    }
+    .subtitle {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .button-group {
+        button {
+            margin-bottom: $margin-standard-item/2;
+        }
+    }
+}

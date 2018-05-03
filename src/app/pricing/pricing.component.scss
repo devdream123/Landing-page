@@ -1,0 +1,71 @@
+@import '../../common/scss/fonts.scss';
+@import '../../common/scss/colors.scss';
+@import '../../common/scss/layouts.scss';
+@import '../../common/scss/variables.scss';
+.container-fluid {
+    @extend %container-layout;
+    color: $font-color-secondary;
+}
+
+.title {
+    @extend %title-section;
+    color: $font-header-color-secondary;
+}
+
+.subtitle {
+    @extend %subtitle-section;
+}
+
+.plans {
+    font-size: $font-size-normal;
+    .card {
+        margin-bottom: $margin-standard-item;
+    }
+    .card-title-container {
+        background: $bg-color-primary;
+        padding-top: $padding-standard-item;
+        padding-bottom: $padding-standard-item;
+        color: $font-color-primary;
+        .card-price {
+            font-size: $font-size-xlarge;
+            span {
+                font-size: $font-size-normal;
+            }
+        }
+    }
+    .card-body {
+        margin: 0 auto;
+        .list-group-item {
+            border: none;
+        }
+        .badge {
+            padding-right: $padding-standard-item;
+        }
+    }
+    .card-btn {
+        padding-top: $padding-standard-item;
+        button {
+            @extend %button-standard;
+            // -webkit-border-image: -webkit-linear-gradient( rgb(79, 70, 206), rgb(83, 176, 219));
+            border-color: $border-color-secondary; //linear-gradient(to right, rgb(79, 70, 206), rgb(83, 176, 219)); //$bg-color-primary;
+            // -webkit-border-image: -webkit-linear-gradient(right, black, rgba(0, 0, 0, 0)) 1 100%;
+            color: $border-color-secondary; //$bg-color-primary;
+            &:hover {
+                background: $bg-color-primary;
+                color: $font-color-primary;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .subtitle {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container-fluid {
+        padding-left: $padding-standard-item;
+        padding-right: $padding-standard-item;
+        padding-bottom: $padding-standard-item;
+    }
+}

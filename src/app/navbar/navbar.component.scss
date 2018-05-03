@@ -1,0 +1,45 @@
+@import '../../common/scss/layouts.scss';
+@import '../../common/scss/colors.scss';
+@import '../../common/scss/fonts.scss';
+.navbar {
+    padding-left: $padding-standard-container;
+    padding-right: $padding-standard-container;
+    font-size: $font-size-normal;
+    .navbar-nav {
+        li {
+            cursor: pointer;
+        }
+        a {
+            color: $font-navbar-color;
+            padding-left: $padding-standard-item;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar {
+        padding-left: $padding-standard-item;
+        padding-right: $padding-standard-item;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-nav {
+        margin-top: $margin-standard-item/2;
+    }
+    .navbar {
+        padding-left: $padding-standard-item;
+        padding-right: $padding-standard-item;
+        color: $font-color-primary;
+        li {
+            background: $bg-color-primary;
+            .nav-link {
+                color: $font-color-primary;
+                &:hover {
+                    background: $bg-color-secondary;
+                    color: $font-navbar-color;
+                }
+            }
+        }
+    }
+}
